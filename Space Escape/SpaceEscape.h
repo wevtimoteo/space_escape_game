@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSTimer *gameRunTimer;
 @property (nonatomic) BOOL running;
 @property (nonatomic) int playerY;
+@property (nonatomic) int enemyRadius;
 
 - (void)moveDown:(int)pixels;
 

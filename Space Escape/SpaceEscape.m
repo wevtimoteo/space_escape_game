@@ -28,6 +28,8 @@
     if (self.running == YES) {
         NSLog(@"Space Escape running..");
 
+        self.enemyRadius++;
+
         [self setNeedsDisplay];
     }
 }
@@ -38,6 +40,7 @@
 
     [self drawBackgroundInContext:context];
     [self drawPlayerInContext:context];
+    [self drawEnemyInContext:context];
 }
 
 - (void)drawPlayerInContext:(CGContextRef)context
@@ -55,6 +58,16 @@
     UIGraphicsPushContext(context);
     CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
     CGContextFillRect(context, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
+    UIGraphicsPopContext();
+}
+
+- (void)drawEnemyInContext:(CGContextRef)context
+{
+    UIGraphicsPushContext(context);
+    CGContextBeginPath(context);
+    CGContextAddArc(context, 100, 100, self.enemyRadius, 0, (2 * M_PI), YES);
+    CGContextSetRGBFillColor(context, 0.4f, 0.4f, 0.4f, 1.0f);
+    CGContextFillPath(context);
     UIGraphicsPopContext();
 }
 
