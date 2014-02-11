@@ -1,7 +1,7 @@
 Space Escape Game
 =================
 
-First iOS game without framework
+First iOS game without framework. Part of tutorial of [iOS Game Development Book](http://www.casadocodigo.com.br/products/livro-jogos-ios).
 
 ![](http://cl.ly/image/2T3r3s0t213k/iOS%20Simulator%20Screen%20shot%20Feb%2011,%202014,%2012.55.52%20AM.png)
 
