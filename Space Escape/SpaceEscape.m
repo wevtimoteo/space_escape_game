@@ -38,6 +38,8 @@
 
         self.enemyRadius++;
 
+        [self checkCollision];
+
         [self setNeedsDisplay];
     }
 }
@@ -83,6 +85,18 @@
 {
     if (self.running == YES) {
         self.playerY += pixels;
+    }
+}
+
+- (void)checkCollision
+{
+    double distance = 0.0f;
+
+    distance = pow(self.playerY - self.enemyY, 2) + pow(self.playerX - self.enemyX, 2);
+    distance = sqrt(distance);
+
+    if (distance <= (self.playerRadius + self.enemyRadius)) {
+        self.running = NO;
     }
 }
 
