@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SpaceEscape.h"
 
 @interface GameViewController : UIViewController
+
+@property (nonatomic, strong) SpaceEscape *spaceEscapeView;
 
 @end
