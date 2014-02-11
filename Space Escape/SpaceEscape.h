@@ -23,6 +23,10 @@
 
 @property (nonatomic, strong) UILabel *gameOverLabel;
 
+@property (nonatomic) int score;
+@property (nonatomic, strong) UILabel *gameScoreLabel;
+
 - (void)moveDown:(int)pixels;
+- (void)increaseScore:(int)points;
 
 @end

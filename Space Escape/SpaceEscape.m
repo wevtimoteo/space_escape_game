@@ -15,6 +15,13 @@
     self = [super init];
 
     if (self) {
+        self.gameScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 85.0f, 300.0f, 30.0f)];
+        self.gameScoreLabel.font = [UIFont systemFontOfSize:25.0f];
+        self.gameScoreLabel.textColor = [UIColor whiteColor];
+        self.gameScoreLabel.backgroundColor = [UIColor clearColor];
+        self.gameScoreLabel.text = @"0";
+        [self addSubview:self.gameScoreLabel];
+
         self.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 40.0f, 300.0f, 50.0f)];
         self.gameOverLabel.font = [UIFont systemFontOfSize:40.0f];
         self.gameOverLabel.textColor = [UIColor lightGrayColor];
@@ -92,6 +99,14 @@
 {
     if (self.running == YES) {
         self.playerY += pixels;
+    }
+}
+
+- (void)increaseScore:(int)points
+{
+    if (self.running == YES) {
+        self.score += points;
+        self.gameScoreLabel.text = [NSString stringWithFormat:@"%d", self.score];
     }
 }
 

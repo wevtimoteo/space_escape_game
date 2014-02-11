@@ -45,6 +45,7 @@
 {
     if (gesture.state == UIGestureRecognizerStateEnded) {
         [self.spaceEscapeView moveDown:10];
+        [self.spaceEscapeView increaseScore:10];
     }
 }
 
