@@ -29,4 +29,20 @@
     }
 }
 
+- (void)drawRect:(CGRect)rect
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self drawPlayerInContext:context];
+}
+
+- (void)drawPlayerInContext:(CGContextRef)context
+{
+    UIGraphicsPushContext(context);
+    CGContextBeginPath(context);
+    CGContextAddArc(context, 160, 275, 25, 0, (2 * M_PI), YES);
+    CGContextSetRGBFillColor(context, 0.0f, 0.9f, 0.0f, 1.0f);
+    CGContextFillPath(context);
+    UIGraphicsPopContext();
+}
+
 @end
