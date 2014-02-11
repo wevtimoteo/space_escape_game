@@ -20,6 +20,7 @@
 		7586B07218A9B32E0082A26B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7586B07018A9B32E0082A26B /* InfoPlist.strings */; };
 		7586B07418A9B32E0082A26B /* Space_EscapeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586B07318A9B32E0082A26B /* Space_EscapeTests.m */; };
 		7586B07F18A9B4A70082A26B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586B07E18A9B4A70082A26B /* GameViewController.m */; };
+		7586B08218A9B6470082A26B /* SpaceEscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586B08118A9B6470082A26B /* SpaceEscape.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		7586B07318A9B32E0082A26B /* Space_EscapeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Space_EscapeTests.m; sourceTree = "<group>"; };
 		7586B07D18A9B4A70082A26B /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		7586B07E18A9B4A70082A26B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		7586B08018A9B6470082A26B /* SpaceEscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceEscape.h; sourceTree = "<group>"; };
+		7586B08118A9B6470082A26B /* SpaceEscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceEscape.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 			children = (
 				7586B07D18A9B4A70082A26B /* GameViewController.h */,
 				7586B07E18A9B4A70082A26B /* GameViewController.m */,
+				7586B08018A9B6470082A26B /* SpaceEscape.h */,
+				7586B08118A9B6470082A26B /* SpaceEscape.m */,
 				7586B05D18A9B32E0082A26B /* AppDelegate.h */,
 				7586B05E18A9B32E0082A26B /* AppDelegate.m */,
 				7586B06018A9B32E0082A26B /* Images.xcassets */,
@@ -245,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7586B05F18A9B32E0082A26B /* AppDelegate.m in Sources */,
+				7586B08218A9B6470082A26B /* SpaceEscape.m in Sources */,
 				7586B07F18A9B4A70082A26B /* GameViewController.m in Sources */,
 				7586B05B18A9B32E0082A26B /* main.m in Sources */,
 			);
