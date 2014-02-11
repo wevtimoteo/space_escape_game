@@ -12,5 +12,8 @@
 
 @property (nonatomic, strong) NSTimer *gameRunTimer;
 @property (nonatomic) BOOL running;
+@property (nonatomic) int playerY;
+
+- (void)moveDown:(int)pixels;
 
 @end

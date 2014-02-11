@@ -16,6 +16,7 @@
 
     if (self) {
         self.gameRunTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f target:self selector:@selector(run) userInfo:nil repeats:YES];
+        self.playerY = 275;
         self.running = YES;
 
     }
@@ -26,12 +27,16 @@
 {
     if (self.running == YES) {
         NSLog(@"Space Escape running..");
+
+        [self setNeedsDisplay];
     }
 }
 
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
+
+    [self drawBackgroundInContext:context];
     [self drawPlayerInContext:context];
 }
 
@@ -39,10 +44,25 @@
 {
     UIGraphicsPushContext(context);
     CGContextBeginPath(context);
-    CGContextAddArc(context, 160, 275, 25, 0, (2 * M_PI), YES);
+    CGContextAddArc(context, 160, self.playerY, 25, 0, (2 * M_PI), YES);
     CGContextSetRGBFillColor(context, 0.0f, 0.9f, 0.0f, 1.0f);
     CGContextFillPath(context);
     UIGraphicsPopContext();
+}
+
+- (void)drawBackgroundInContext:(CGContextRef)context
+{
+    UIGraphicsPushContext(context);
+    CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
+    CGContextFillRect(context, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
+    UIGraphicsPopContext();
+}
+
+- (void)moveDown:(int) pixels
+{
+    if (self.running == YES) {
+        self.playerY += pixels;
+    }
 }
 
 @end

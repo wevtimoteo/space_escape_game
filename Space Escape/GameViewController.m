@@ -30,6 +30,8 @@
     self.spaceEscapeView = [[SpaceEscape alloc] init];
 
     self.spaceEscapeView.frame = CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height);
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    [self.spaceEscapeView addGestureRecognizer:tapGesture];
     [self.view addSubview:self.spaceEscapeView];
 }
 
@@ -37,6 +39,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)handleTapGesture:(UITapGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateEnded) {
+        [self.spaceEscapeView moveDown:10];
+    }
 }
 
 @end
