@@ -29,4 +29,7 @@
 - (void)moveDown:(int)pixels;
 - (void)increaseScore:(int)points;
 
+- (void)stopGame;
+- (void)restartGame;
+
 @end

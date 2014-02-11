@@ -123,4 +123,27 @@
     }
 }
 
+- (void)stopGame
+{
+    self.running = NO;
+}
+
+- (void)restartGame
+{
+    self.enemyX = 0;
+    self.enemyY = 0;
+    self.enemyRadius = 0;
+
+    self.playerX = 160;
+    self.playerY = 275;
+    self.playerRadius = 25;
+
+    self.score = 0;
+    self.gameScoreLabel.text = @"0";
+    self.gameOverLabel.text = @"";
+
+    self.running = YES;
+}
+
+
 @end

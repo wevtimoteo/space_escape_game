@@ -44,7 +44,7 @@
     [buttonStop setTitle:@"Stop" forState:UIControlStateNormal];
     buttonStop.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     buttonStop.frame = CGRectMake(20.0f, 250.0f, 80.0f, 35.0f);
-    [buttonRestart addTarget:self action:@selector(stop:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonStop addTarget:self action:@selector(stop:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:buttonStop];
 }
 
@@ -64,12 +64,12 @@
 
 - (void)restart:(id)sender
 {
-
+    [self.spaceEscapeView restartGame];
 }
 
 - (void)stop:(id)sender
 {
-
+    [self.spaceEscapeView stopGame];
 }
 
 @end
