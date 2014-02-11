@@ -21,6 +21,8 @@
 @property (nonatomic) int enemyY;
 @property (nonatomic) int enemyRadius;
 
+@property (nonatomic, strong) UILabel *gameOverLabel;
+
 - (void)moveDown:(int)pixels;
 
 @end

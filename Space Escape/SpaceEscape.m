@@ -15,6 +15,13 @@
     self = [super init];
 
     if (self) {
+        self.gameOverLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 40.0f, 300.0f, 50.0f)];
+        self.gameOverLabel.font = [UIFont systemFontOfSize:40.0f];
+        self.gameOverLabel.textColor = [UIColor lightGrayColor];
+        self.gameOverLabel.backgroundColor = [UIColor clearColor];
+        self.gameOverLabel.text = @"";
+        [self addSubview:self.gameOverLabel];
+
         self.gameRunTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f target:self selector:@selector(run) userInfo:nil repeats:YES];
 
         self.playerX = 160;
@@ -96,6 +103,7 @@
     distance = sqrt(distance);
 
     if (distance <= (self.playerRadius + self.enemyRadius)) {
+        self.gameOverLabel.text = @"Game Over!";
         self.running = NO;
     }
 }
