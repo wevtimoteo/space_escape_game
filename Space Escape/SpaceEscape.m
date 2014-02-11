@@ -69,20 +69,24 @@
 
 - (void)drawPlayerInContext:(CGContextRef)context
 {
-    UIGraphicsPushContext(context);
-    CGContextBeginPath(context);
-    CGContextAddArc(context, self.playerX, self.playerY, self.playerRadius, 0, (2 * M_PI), YES);
-    CGContextSetRGBFillColor(context, 0.0f, 0.9f, 0.0f, 1.0f);
-    CGContextFillPath(context);
-    UIGraphicsPopContext();
+//    UIGraphicsPushContext(context);
+//    CGContextBeginPath(context);
+//    CGContextAddArc(context, self.playerX, self.playerY, self.playerRadius, 0, (2 * M_PI), YES);
+//    CGContextSetRGBFillColor(context, 0.0f, 0.9f, 0.0f, 1.0f);
+//    CGContextFillPath(context);
+//    UIGraphicsPopContext();
+    UIImage *image = [UIImage imageNamed:@"airship.png"];
+    [image drawAtPoint:CGPointMake((self.playerX - (image.size.width / 2)), (self.playerY - (image.size.height / 2)))];
 }
 
 - (void)drawBackgroundInContext:(CGContextRef)context
 {
-    UIGraphicsPushContext(context);
-    CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
-    CGContextFillRect(context, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
-    UIGraphicsPopContext();
+//    UIGraphicsPushContext(context);
+//    CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
+//    CGContextFillRect(context, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
+//    UIGraphicsPopContext();
+    UIImage *image = [UIImage imageNamed:@"sky.png"];
+    [image drawAtPoint:CGPointMake(0.0f, 0.0f)];
 }
 
 - (void)drawEnemyInContext:(CGContextRef)context
@@ -90,7 +94,7 @@
     UIGraphicsPushContext(context);
     CGContextBeginPath(context);
     CGContextAddArc(context, self.enemyX, self.enemyY, self.enemyRadius, 0, (2 * M_PI), YES);
-    CGContextSetRGBFillColor(context, 0.4f, 0.4f, 0.4f, 1.0f);
+    CGContextSetRGBFillColor(context, 1.0f, 0.0f, 0.0f, 1.0f);
     CGContextFillPath(context);
     UIGraphicsPopContext();
 }

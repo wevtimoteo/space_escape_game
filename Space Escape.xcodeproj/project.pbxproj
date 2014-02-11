@@ -21,6 +21,8 @@
 		7586B07418A9B32E0082A26B /* Space_EscapeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586B07318A9B32E0082A26B /* Space_EscapeTests.m */; };
 		7586B07F18A9B4A70082A26B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586B07E18A9B4A70082A26B /* GameViewController.m */; };
 		7586B08218A9B6470082A26B /* SpaceEscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586B08118A9B6470082A26B /* SpaceEscape.m */; };
+		7586B08518A9C72F0082A26B /* airship.png in Resources */ = {isa = PBXBuildFile; fileRef = 7586B08318A9C72F0082A26B /* airship.png */; };
+		7586B08618A9C72F0082A26B /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = 7586B08418A9C72F0082A26B /* sky.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		7586B07E18A9B4A70082A26B /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		7586B08018A9B6470082A26B /* SpaceEscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceEscape.h; sourceTree = "<group>"; };
 		7586B08118A9B6470082A26B /* SpaceEscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceEscape.m; sourceTree = "<group>"; };
+		7586B08318A9C72F0082A26B /* airship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airship.png; path = "Space Escape/airship.png"; sourceTree = "<group>"; };
+		7586B08418A9C72F0082A26B /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sky.png; path = "Space Escape/sky.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		7586B04218A9B32E0082A26B = {
 			isa = PBXGroup;
 			children = (
+				7586B08718A9C73A0082A26B /* Assets */,
 				7586B05418A9B32E0082A26B /* Space Escape */,
 				7586B06D18A9B32E0082A26B /* Space EscapeTests */,
 				7586B04D18A9B32E0082A26B /* Frameworks */,
@@ -152,6 +157,15 @@
 				7586B07018A9B32E0082A26B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7586B08718A9C73A0082A26B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7586B08318A9C72F0082A26B /* airship.png */,
+				7586B08418A9C72F0082A26B /* sky.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7586B05918A9B32E0082A26B /* InfoPlist.strings in Resources */,
+				7586B08618A9C72F0082A26B /* sky.png in Resources */,
 				7586B06118A9B32E0082A26B /* Images.xcassets in Resources */,
+				7586B08518A9C72F0082A26B /* airship.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
