@@ -10,4 +10,7 @@
 
 @interface SpaceEscape : UIView
 
+@property (nonatomic, strong) NSTimer *gameRunTimer;
+@property (nonatomic) BOOL running;
+
 @end

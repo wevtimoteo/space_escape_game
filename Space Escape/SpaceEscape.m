@@ -10,13 +10,23 @@
 
 @implementation SpaceEscape
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
+
     if (self) {
+        self.gameRunTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f target:self selector:@selector(run) userInfo:nil repeats:YES];
+        self.running = YES;
 
     }
     return self;
+}
+
+- (void)run
+{
+    if (self.running == YES) {
+        NSLog(@"Space Escape running..");
+    }
 }
 
 @end
