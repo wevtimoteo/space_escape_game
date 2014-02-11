@@ -16,7 +16,15 @@
 
     if (self) {
         self.gameRunTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f/60.0f target:self selector:@selector(run) userInfo:nil repeats:YES];
+
+        self.playerX = 160;
         self.playerY = 275;
+        self.playerRadius = 25;
+
+        self.enemyX = 0;
+        self.enemyY = 0;
+        self.enemyRadius = 0;
+
         self.running = YES;
 
     }
@@ -47,7 +55,7 @@
 {
     UIGraphicsPushContext(context);
     CGContextBeginPath(context);
-    CGContextAddArc(context, 160, self.playerY, 25, 0, (2 * M_PI), YES);
+    CGContextAddArc(context, self.playerX, self.playerY, self.playerRadius, 0, (2 * M_PI), YES);
     CGContextSetRGBFillColor(context, 0.0f, 0.9f, 0.0f, 1.0f);
     CGContextFillPath(context);
     UIGraphicsPopContext();
@@ -65,7 +73,7 @@
 {
     UIGraphicsPushContext(context);
     CGContextBeginPath(context);
-    CGContextAddArc(context, 100, 100, self.enemyRadius, 0, (2 * M_PI), YES);
+    CGContextAddArc(context, self.enemyX, self.enemyY, self.enemyRadius, 0, (2 * M_PI), YES);
     CGContextSetRGBFillColor(context, 0.4f, 0.4f, 0.4f, 1.0f);
     CGContextFillPath(context);
     UIGraphicsPopContext();
